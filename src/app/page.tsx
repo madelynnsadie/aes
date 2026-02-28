@@ -47,7 +47,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center text-xl bg-mauve-900 text-rose-200 w-screen min-h-screen p-4 px-24 lowercase">
-      <h1 className="text-2xl text-rose-300 absolute top-4 bg-mauve-950/25 rounded-full p-2 px-8">~ {db.settings.unit.symbol}{db.total} ~</h1>
+      <h1 className="text-2xl text-rose-300 absolute top-4 bg-mauve-950/25 rounded-full p-2 px-8">~ {db.settings.unit.symbol}{Math.round(db.total)} ~</h1>
 
       <div className="w-full h-full mt-16 mx-96 bg-mauve-950/25 rounded-xl flex flex-col items-start justify-start p-4 gap-4">
         <div className={`w-full ${expanded ? "h-84" : "fit items-center"} bg-mauve-950/20 rounded-md flex flex-col gap-2 p-2 px-4`}>
@@ -82,7 +82,7 @@ export default function Home() {
                 placeholder="amount"
               />
 
-              <div className="mt-2 rounded-lg bg-mauve-950/25 p-2 px-4 w-fit text-rose-300">
+              <div className="mt-2 rounded-lg bg-mauve-950/25 p-2 px-4 w-fit text-rose-300" onClick={() => submit()}>
                 <h1>submit</h1>
               </div>
             </div>
